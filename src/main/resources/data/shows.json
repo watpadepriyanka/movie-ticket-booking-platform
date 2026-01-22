@@ -1,0 +1,11 @@
+[
+  {
+    "id": "show1",
+    "movieId": "movie1",
+    "theatreId": "theatre1",
+    "showDate": "2026-01-22",
+    "showTime": "18:30",
+    "totalSeats": 100,
+    "availableSeats": 100
+  }
+]

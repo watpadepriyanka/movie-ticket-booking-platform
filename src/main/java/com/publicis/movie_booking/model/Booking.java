@@ -1,21 +1,25 @@
 package com.publicis.movie_booking.model;
 
-
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.time.LocalDateTime;
 
-@Document(collation = "bookings")
+@Document(collection = "bookings")
 public class Booking {
 
     @Id
     private String id;
+
     private String showId;
-    private int bookedSeat;
+    private String userId;
+
+    private int bookedSeats;
     private double totalAmount;
     private double discount;
     private String status;
 
+    private LocalDateTime bookedAt;
 
     public String getId() {
         return id;
@@ -25,8 +29,12 @@ public class Booking {
         return showId;
     }
 
-    public int getBookedSeat() {
-        return bookedSeat;
+    public String getUserId() {
+        return userId;
+    }
+
+    public int getBookedSeats() {
+        return bookedSeats;
     }
 
     public double getTotalAmount() {
@@ -41,6 +49,10 @@ public class Booking {
         return status;
     }
 
+    public LocalDateTime getBookedAt() {
+        return bookedAt;
+    }
+
     public void setId(String id) {
         this.id = id;
     }
@@ -49,8 +61,12 @@ public class Booking {
         this.showId = showId;
     }
 
-    public void setBookedSeat(int bookedSeat) {
-        this.bookedSeat = bookedSeat;
+    public void setUserId(String userId) {
+        this.userId = userId;
+    }
+
+    public void setBookedSeats(int bookedSeats) {
+        this.bookedSeats = bookedSeats;
     }
 
     public void setTotalAmount(double totalAmount) {
@@ -63,5 +79,9 @@ public class Booking {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    public void setBookedAt(LocalDateTime bookedAt) {
+        this.bookedAt = bookedAt;
     }
 }

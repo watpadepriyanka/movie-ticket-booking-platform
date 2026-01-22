@@ -2,6 +2,7 @@ package com.publicis.movie_booking;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.mongodb.autoconfigure.MongoAutoConfiguration;
 
 @SpringBootApplication
 public class MovieBookingApplication {

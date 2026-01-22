@@ -1,8 +1,7 @@
 package com.publicis.movie_booking.controller;
 
 import com.publicis.movie_booking.dto.TheatreShowResponse;
-import com.publicis.movie_booking.model.Theatre;
-import com.publicis.movie_booking.service.BrowseServiceImpl;
+import com.publicis.movie_booking.service.TheatreService;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDate;
@@ -12,10 +11,10 @@ import java.util.List;
 @RequestMapping("/browse")
 public class BrowseController {
 
-    private  final BrowseServiceImpl browseservice ;
+    private final TheatreService theatreService;
 
-    public BrowseController(BrowseServiceImpl browseservice) {
-        this.browseservice = browseservice;
+    public BrowseController(TheatreService theatreService) {
+        this.theatreService = theatreService;
     }
 
     //browser theatre
@@ -26,10 +25,9 @@ public class BrowseController {
             @RequestParam String city,
             @RequestParam String date) {
 
-        Theatre t = new Theatre();
-        t.getId();
 
-        return browseservice.browseTheatres(
+
+        return theatreService.browseTheatres(
                 movieId,
                 city,
                 LocalDate.parse(date)

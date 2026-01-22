@@ -2,12 +2,13 @@ package com.publicis.movie_booking.model;
 
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.annotation.Version;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
 
-@Document(collation = "shows")
+@Document(collection = "shows")
 public class Show {
 
     @Id
@@ -18,6 +19,9 @@ public class Show {
     private LocalTime showTime;
     private int totalSeats;
     private int availableSeats;
+
+    @Version
+    private Long version;
 
     public String getId() {
         return id;

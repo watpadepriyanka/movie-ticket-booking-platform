@@ -12,12 +12,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
-public class BrowseServiceImpl implements BrowseService {
+public class TheatreServiceImpl implements TheatreService {
 
     private final TheatreRepository theatreRepository;
     private final ShowRepository showRepository;
 
-    public BrowseServiceImpl(TheatreRepository theatreRepository, ShowRepository showRepository) {
+    public TheatreServiceImpl(TheatreRepository theatreRepository, ShowRepository showRepository) {
         this.theatreRepository = theatreRepository;
         this.showRepository = showRepository;
     }
@@ -47,8 +47,4 @@ public class BrowseServiceImpl implements BrowseService {
         return response;
     }
 
-    @Override
-    public void BrowseMovie() {
-
-    }
 }
