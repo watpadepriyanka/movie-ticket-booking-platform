@@ -1,11 +1,11 @@
-package com.publicis.movie_booking.Repository;
+package com.publicis.movie_booking.repository;
 
-import com.publicis.movie_booking.Model.Theatre;
+import com.publicis.movie_booking.model.Theatre;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
 import java.util.List;
 
 public interface TheatreRepository extends MongoRepository<Theatre,String> {
 
-    List<Theatre> findbyCity(String city);
+    List<Theatre> findByCity(String city);
 }

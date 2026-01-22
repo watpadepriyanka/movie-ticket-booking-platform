@@ -1,10 +1,10 @@
-package com.publicis.movie_booking.Model;
+package com.publicis.movie_booking.model;
 
-import lombok.Data;
+
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Data
+
 @Document(collection = "movies")
 public class Movie {
 
@@ -14,6 +14,19 @@ public class Movie {
     private String language;
     private String genre;
 
+    public String getId() {
+        return id;
+    }
 
+    public String getName() {
+        return name;
+    }
 
+    public String getLanguage() {
+        return language;
+    }
+
+    public String getGenre() {
+        return genre;
+    }
 }

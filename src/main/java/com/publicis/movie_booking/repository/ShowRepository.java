@@ -1,6 +1,6 @@
-package com.publicis.movie_booking.Repository;
+package com.publicis.movie_booking.repository;
 
-import com.publicis.movie_booking.Model.Show;
+import com.publicis.movie_booking.model.Show;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
 import java.time.LocalDate;
